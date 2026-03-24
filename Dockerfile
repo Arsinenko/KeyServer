@@ -4,7 +4,7 @@ FROM golang:1.22-alpine AS builder
 WORKDIR /app
 
 # Кэш зависимостей
-COPY go.mod go.sum ./
+COPY go.mod ./
 RUN go mod download
 
 # Копируем код
